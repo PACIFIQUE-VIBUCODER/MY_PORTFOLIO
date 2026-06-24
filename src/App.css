@@ -32,6 +32,7 @@ body {
   font-family: Arial, sans-serif;
   background: #0c0c0c;
   color: #333;
+  overflow-x: hidden;
 }
 
 .app {
@@ -48,8 +49,13 @@ body {
 
 #home {
 
-  background: radial-gradient( ellipse at bottom left,#000000,#2d2d2d);
-
+ background-color:#030508;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    radial-gradient(circle at 50% 60%, rgba(255, 159, 0, 0.15), transparent 80%); /* Iyi izana glow isa n'umuhondo ijana n'izina ryawe */
+  
+  background-size: 40px 40px, 40px 40px, auto; /* Ingano ya buri square */
 }
 
 #about {

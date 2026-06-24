@@ -1,9 +1,25 @@
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Niba bamanutseho pixels zirenga 50, "scrolled" iba true
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
-    <header className="header">
+    <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">
         <h2>PACIFIQUE</h2>
       </div>
@@ -18,6 +34,5 @@ export default function Header() {
         <a href="#contact">Contact</a>
       </nav>
     </header>
-    </div>
   );
 }
