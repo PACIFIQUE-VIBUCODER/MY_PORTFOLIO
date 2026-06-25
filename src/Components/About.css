@@ -1,0 +1,199 @@
+.about-container {
+  width: 210vh;
+  margin-left: -10vh;
+  margin-right: -15vh;
+  height: 80vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-content {
+  width: 120vh;
+  height: 60vh;
+  margin-top: -3.5vh;
+  z-index: 2;
+}
+
+.about-title {
+  margin-top: 4vh; 
+  color: #ffffff; 
+  font-family: sans-serif;
+}
+
+.about-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: sans-serif;
+  font-size: 2vh;
+  max-width: 70vh;
+  line-height: 1.6;
+}
+
+.section-subtitle {
+  color: #ff9f00;
+  font-family: serif;
+  font-size: 3.5vh;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
+/* --- TIMELINE STYLING (MATCHING HOME THEME) --- */
+.timeline {
+  border-left: 2px solid #00ff88;
+  margin-left: 2vh;
+  padding-left: 3vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 1.5vh;
+  height: 1.5vh;
+  background-color: #ff9f00;
+  border-radius: 50%;
+  left: -3.85vh;
+  top: 0.8vh;
+  box-shadow: 0 0 10px #ff9f00;
+}
+
+.timeline-date {
+  color: #00ff88;
+  font-size: 1.8vh;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.timeline-title {
+  color: white;
+  font-size: 2.2vh;
+  margin: 0.5vh 0;
+  font-family: sans-serif;
+}
+
+.timeline-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.8vh;
+  margin: 0;
+  font-family: sans-serif;
+  max-width: 65vh;
+}
+
+/* --- IFATA RUHANDE RW'IBURYO RYOSE --- */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HANO NI HO CARD IRI (ISANZE NEZA NA HOME-IMAGE) --- */
+.skills-card {
+  width: 45vh; 
+  height: 55vh; 
+  margin-left: 20vh;
+  margin-top: 7vh;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  background: #030508; 
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+  border-radius: 6px; 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease, border-color 0.2s ease;
+  animation: zunguza 0.4s ease-in-out infinite alternate;
+  opacity: 85%;
+  padding: 2vh;
+  box-sizing: border-box;
+}
+
+.skills-card:hover {
+  border-color: rgba(255, 159, 0, 0.5);
+  box-shadow: 0 15px 40px rgba(255, 159, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* --- KUZUNGUZA ANIMATION KEYFRAMES (SAME AS HOME) --- */
+@keyframes zunguza {
+  0% {
+    transform: translateY(-5px) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateY(-5px) rotate(1.5deg);
+  }
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1vh;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(231, 6, 6);
+  font-family: sans-serif;
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin-top: 2vh;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.8vh 1.5vh;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-name {
+  color: white;
+  font-size: 1.8vh;
+  font-family: sans-serif;
+}
+
+.skill-level {
+  color: #00ff88;
+  font-size: 1.5vh;
+  font-family: monospace;
+}
+
+/* --- NGAYI CARD IRI MUNSI YAYO NEZA (MATCHING DEV-OBJECT-CARD) --- */
+.vision-card {
+  width: 80vh; 
+  background: rgba(3, 5, 8, 0.9); 
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(0, 255, 136, 0.4);
+  border-top: none;
+  border-radius: 6px;
+  padding: 2vh;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-sizing: border-box;
+  margin-top: -10vh;
+  margin-left: -1vh;
+  z-index: 3;
+}
+
+.vision-card h4 {
+  margin: 0 0 0.5vh 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6vh;
+  color: #ff9f00;
+}
+
+.vision-card p {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.6vh;
+  color: #00ff88;
+  text-align: left;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
