@@ -48,7 +48,6 @@ export default function Home() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // Handle search logic here
     console.log("Searching for:", searchQuery);
   };
 
@@ -85,6 +84,7 @@ export default function Home() {
           </p>
         </div>
 
+       
         {/* --- INTERACTIVE METRICS SECTION --- */}
         <div className="metrics-container">
           <div className="metric-card">
@@ -100,8 +100,18 @@ export default function Home() {
             <p>Clean & Scalable Code</p>
           </div>
         </div>
-        <br />
-        <button className="mycv-btn">View Resume</button>
+ {/* --- SOCIAL MEDIA LINKS MUNSI YA METRICS WITH ICONS --- */}
+<div className="home-social-links">
+  <a href="https://github.com/PACIFIQUEVIBUCODER" target="_blank" rel="noreferrer" className="social-icon-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" className="social-icon-img" />
+  </a>
+  <a href="https://linkedin.com/in/your_username" target="_blank" rel="noreferrer" className="social-icon-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" className="social-icon-img" />
+  </a>
+  <a href="https://t.me/your_telegram_username" target="_blank" rel="noreferrer" className="social-icon-link">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" className="social-icon-img" />
+  </a>
+</div>
       </section>
 
       {/* --- IFATA RUHANDE RW'IBURYO RYOSE --- */}

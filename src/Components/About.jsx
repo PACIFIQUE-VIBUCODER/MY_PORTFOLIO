@@ -60,6 +60,8 @@ export default function About() {
                 </p>
               </div>
             </div>
+            <br />
+        <button className="mycv-btn">View Resume</button>
           </div>
 
           {/* RIGHT SIDE - TIMELINE WITH EXPERIENCE SUBTITLE */}

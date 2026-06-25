@@ -226,32 +226,7 @@ text-shadow: 1px 1px 1px rgb(231, 6, 6);
   font-weight: normal;
 }
 
-.mycv-link {
-  text-decoration: none;
-}
 
-.mycv-btn {
-  width: 40vh;
-  height: 8vh;
-  margin-top: 5vh;
-  font-size: 4vh;
-  font-family: serif;
-  font-weight: bold;
-  background-color: #9d6100;
-  border: none;
-  border-radius: 1vh;
-  color: #000000;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px #9d6100;
-}
-
-.mycv-btn:hover {
-  background-color: #ff9f00;
-  color: #ffffff;
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff9f00;
-}
 .dev-object-card {
   width: 80vh; /* Ihuye n'ubugari bwa card yo hejuru */
   background: rgba(3, 5, 8, 0.9); 
@@ -274,4 +249,62 @@ text-shadow: 1px 1px 1px rgb(231, 6, 6);
   text-align: left;
   line-height: 1.5;
   white-space: pre-wrap;
+}
+/* --- SOCIAL LINKS ICONS STYLE --- */
+.home-social-links {
+  display: flex;
+  gap: 4vh;
+  margin-top: 8vh;
+  align-items: center;
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7vh;
+  height: 7vh;
+  border-radius: 50%; /* Bikora uruziga */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon-img {
+  width: 3.5vh;
+  height: 3.5vh;
+  object-fit: contain;
+  filter: invert(1); /* Biha ishusho ibara ryera ngo bihure n'umwijima */
+  transition: all 0.3s ease;
+  
+}
+
+
+/* Hover effects zikora glow nziza cyane */
+.social-icon-link:hover {
+  transform: translateY(-1vh);
+}
+
+.social-icon-link:hover .social-icon-img {
+  filter: none; /* Bisubiza amabara yazo y'umwimerere (Blue kuri LinkedIn, n'ibindi) */
+}
+
+
+/* GitHub hover */
+.social-icon-link:nth-child(1):hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+  
+}
+
+/* LinkedIn hover */
+.social-icon-link:nth-child(2):hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+/* Telegram hover */
+.social-icon-link:nth-child(3):hover {
+  border-color: #00ff88;
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
 }

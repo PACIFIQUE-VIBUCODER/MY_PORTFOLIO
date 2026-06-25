@@ -2,7 +2,6 @@
     width: 200vh;
     margin-left: -5vh;
     min-height: 100vh;
-    padding: 8vh 15vh;
     box-sizing: border-box;
 }
 
@@ -265,6 +264,32 @@
 }
 .show-experience{
     margin-top: -11vh;
-    margin-left: 80vh;
+    margin-left: 90vh;
     color:#ff9f00;
+}
+.mycv-link {
+  text-decoration: none;
+}
+
+.mycv-btn {
+  width: 40vh;
+  height: 8vh;
+  margin-top: 5vh;
+  font-size: 4vh;
+  font-family: serif;
+  font-weight: bold;
+  background-color: #9d6100;
+  border: none;
+  border-radius: 1vh;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px #000000;
+}
+
+.mycv-btn:hover {
+  background-color: #ff9f00;
+  color: #ffffff;
+  transform: scale(1.05);
+ filter: drop-shadow(0 0 1px #00ff88);
 }
