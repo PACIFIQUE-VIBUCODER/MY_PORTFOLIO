@@ -1,0 +1,199 @@
+.skills-page-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #030508; /* Perfectly matches your Home component base */
+  padding: 6vh 10vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.skills-page-content {
+  max-width: 160vh;
+  margin: 0 auto;
+}
+
+.skills-page-title {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 5vh;
+  margin: 0 0 1vh 0;
+  letter-spacing: 2px;
+}
+
+.skills-subtitle-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: sans-serif;
+  font-size: 2vh;
+  margin-bottom: 6vh;
+}
+
+.section-divider-title {
+  color: #ff9f00; /* Amber primary brand accent */
+  font-family: sans-serif;
+  font-size: 3vh;
+  margin-bottom: 4vh;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- LANGUAGES GRID WITH SVG METRICS --- */
+.languages-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4vh;
+  margin-bottom: 8vh;
+}
+
+.language-metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 3vh;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-metric-card h3 {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 2.2vh;
+  margin: 2vh 0 0 0;
+  font-weight: 600;
+}
+
+.circle-progress-wrapper {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.progress-svg {
+  transform: rotate(-90deg);
+}
+
+.bg-circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 8;
+}
+
+.fg-circle {
+  fill: none;
+  stroke: #00ff88; /* Your explicit energetic neon green */
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.percentage-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+/* Hover Interactive Animations */
+.language-metric-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9f00;
+  box-shadow: 0 10px 25px rgba(255, 159, 0, 0.15);
+}
+
+.language-metric-card:hover .fg-circle {
+  stroke: #ff9f00; /* Shifts to brand gold on focus interaction */
+}
+
+/* --- ECOSYSTEM AND FRAMEWORK CLOUDS --- */
+.stack-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vh;
+}
+
+.stack-card {
+  background: rgba(3, 5, 8, 0.9);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(0, 255, 136, 0.3); /* Transparent neon green framework borders */
+  border-radius: 6px;
+  padding: 4vh 3vh;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stack-card h3 {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 2.4vh;
+  margin: 0 0 3vh 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5vh;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vh;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 1vh 2vh;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 1.8vh;
+  transition: all 0.2s ease-in-out;
+  cursor: default;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: #00ff88;
+  color: #00ff88;
+  transform: scale(1.05);
+}
+
+.stack-card:hover {
+  border-color: #ff9f00;
+  box-shadow: 0 0 20px rgba(255, 159, 0, 0.15);
+}
+
+/* --- FULL MEDIA BREAKPOINT RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+  .languages-metric-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stack-grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-page-container {
+    padding: 4vh 3vh;
+  }
+  .languages-metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vh;
+  }
+  .stack-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 3vh;
+  }
+  .skills-page-title {
+    font-size: 4vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .languages-metric-grid {
+    grid-template-columns: 1fr;
+  }
+}
