@@ -1,0 +1,156 @@
+/* CONTAINER NKURU */
+.experience-page-container {
+  width: 210vh;
+  margin-left: -10vh;
+  margin-right: -15vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #030508;
+  color: #ffffff;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+/* MAIN CONTENT */
+.experience-main-content {
+  padding: 5vh 10vh;
+  flex: 1;
+}
+
+.experience-header {
+  margin-bottom: 6vh;
+}
+
+/* TIMELINE CONTAINER & CARDS */
+.timeline-container {
+  position: relative;
+  border-left: 2px solid #ff9f00;
+  margin-left: 4vh;
+  padding-left: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  max-width: 120vh;
+}
+
+.timeline-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4vh;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff88;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+/* AKANYU KARI KURI LINE (DOT) */
+.timeline-dot {
+  position: absolute;
+  left: -5.2vh;
+  top: 4.5vh;
+  width: 2vh;
+  height: 2vh;
+  background-color: #030508;
+  border: 3px solid #00ff88;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+.timeline-date {
+  color: #ff9f00;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.2vh;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+.job-role {
+  margin: 0;
+  font-size: 3vh;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.job-company {
+  margin: 0.5vh 0 2vh 0;
+  color: #00ff88;
+  font-size: 2.2vh;
+  font-weight: normal;
+}
+
+.job-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 2vh;
+  line-height: 1.6;
+}
+
+/* SKILLS TAGS */
+.tech-tags {
+  display: flex;
+  gap: 1.5vh;
+  margin-top: 3vh;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(255, 159, 0, 0.1);
+  border: 1px solid rgba(255, 159, 0, 0.3);
+  color: #ff9f00;
+  padding: 0.5vh 2vh;
+  border-radius: 4px;
+  font-size: 1.7vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* FOOTER (KAKA NYU) */
+.contact-footer {
+  background: rgba(3, 5, 8, 0.95);
+  border-top: 2px solid rgba(0, 255, 136, 0.3);
+  padding: 4vh 10vh 2vh 10vh;
+  margin-top: 10vh;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3vh;
+}
+
+.footer-column h4 {
+  color: #ff9f00;
+  font-size: 2.2vh;
+  margin-bottom: 2vh;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.footer-column a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.8vh;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #00ff88;
+}
+
+.social-links {
+  display: flex;
+  gap: 4vh;
+  justify-content: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2vh;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.6vh;
+}
