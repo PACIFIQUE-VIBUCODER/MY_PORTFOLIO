@@ -2,17 +2,32 @@ import React from "react";
 import "./About.css";
 
 export default function About() {
-  // Icya mbere: Twakuyeho "const skills = [...]" kuko itagikenewe hano.
+  // Urutonde rw'aho wakoze cyangwa imishinga wakoze rukuwe muri Experience.jsx
+  const experiences = [
+    {
+      role: "Full-Stack Developer",
+      company: "Freelance / Personal Projects",
+      duration: "2025 - Present",
+      description: "Developing scalable web applications using React, PHP, and JavaScript. Focused on building fast RESTful APIs, securing servers, and designing clean user interfaces.",
+      skills: ["React", "JavaScript", "PHP", "Git"]
+    },
+    {
+      role: "Frontend Developer & UI Designer",
+      company: "Tech Solutions Hub (Junior Role/Intern)",
+      duration: "2024 - 2025",
+      description: "Created responsive user interfaces using HTML, CSS, and Vue.js. Collaborated with teams to implement seamless user experiences and managed version control using Git.",
+      skills: ["HTML", "Vue.js", "UI Design", "Git"]
+    }
+  ];
 
   return (
     <div className="about-container">  
       <section className="about-content">
         <h1 className="about-title">ABOUT ME</h1>
-        
-        {/* --- TOP SECTION: SPLIT LAYOUT --- */}
+        <h1 className="show-experience">EXPERIENCE</h1>
+
         <div className="top-section">
-          
-          {/* LEFT: Bio & Mission/Vision */}
+          {/* LEFT SIDE - BIO & MV CARDS */}
           <div className="about-left">
             <p className="about-description">
               I am a passionate Full-Stack Developer dedicated to creating
@@ -27,7 +42,6 @@ export default function About() {
               backend systems, RESTful APIs, and database architectures.
             </p>
 
-            {/* Mission & Vision Row */}
             <div className="mv-container">
               <div className="mv-card">
                 <h2>Mission</h2>
@@ -48,31 +62,33 @@ export default function About() {
             </div>
           </div>
 
-          {/* RIGHT: Timeline Journey */}
+          {/* RIGHT SIDE - TIMELINE WITH EXPERIENCE SUBTITLE */}
           <div className="about-right">
+            <h4 className="journey-experience">2+ Years of Experience</h4>
+
             <h3 className="section-subtitle">My Journey</h3>
             
             <div className="timeline">
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <span className="timeline-date">2024 - Present</span>
-                <h4 className="timeline-title">Full-Stack Developer</h4>
-                <p className="timeline-text">Building production-ready software, crafting scalable database structures, and designing fast RESTful APIs.</p>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <span className="timeline-date">2022 - 2024</span>
-                <h4 className="timeline-title">Frontend & UI Specialist</h4>
-                <p className="timeline-text">Deep-dived into React, UI systems, and responsive layouts to match absolute pixel-perfection designs.</p>
-              </div>
+              {experiences.map((exp, index) => (
+                <div className="timeline-item" key={index}>
+                  <div className="timeline-dot"></div>
+                  <span className="timeline-date">{exp.duration}</span>
+                  <h4 className="timeline-title">{exp.role}</h4>
+                  <h5 className="timeline-company">{exp.company}</h5>
+                  <p className="timeline-text">{exp.description}</p>
+                  
+                  {/* TECH TAGS */}
+                  <div className="tech-tags">
+                    {exp.skills.map((skill, idx) => (
+                      <span className="tech-tag" key={idx}>{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
         </div>
-
-        {/* Igice cya LOWER SECTION cyari kirimo skills cyakuwemo zvose */}
-
       </section>
     </div>
   );
