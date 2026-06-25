@@ -1,0 +1,138 @@
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4vh 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+.projects-title {
+  font-size: 5vh;
+  font-family: serif;
+  background: linear-gradient(45deg, #ff9f00, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+.title-underline {
+  width: 10vh;
+  height: 4px;
+  background: #00ff88;
+  margin: 1vh auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* --- PROJECTS GRID --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4vh;
+  width: 100%;
+}
+
+/* --- PROJECT CARD (Byakopewe kuri Home.css style) --- */
+.project-card {
+  background: rgba(3, 5, 8, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4vh 3vh;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff9f00;
+  box-shadow: 0 15px 40px rgba(255, 159, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.project-number {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 3.5vh;
+  font-family: 'Courier New', monospace;
+  color: rgba(0, 255, 136, 0.2);
+  font-weight: bold;
+}
+
+.project-content h3 {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 3vh;
+  margin-bottom: 2vh;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+  color: #00ff88;
+}
+
+.project-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: sans-serif;
+  font-size: 1.8vh;
+  line-height: 1.6;
+  margin-bottom: 3vh;
+  min-height: 10vh; /* Kuri gukora cards zose zikangana */
+}
+
+/* --- TECH BADGES --- */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vh;
+  margin-bottom: 4vh;
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5vh;
+  padding: 0.5vh 1.5vh;
+  border-radius: 4px;
+}
+
+/* --- LINK STYLING --- */
+.view-project-link {
+  text-decoration: none;
+  color: #ff9f00;
+  font-weight: bold;
+  font-size: 1.8vh;
+  font-family: sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.view-project-link:hover {
+  color: #ffffff;
+}
+
+.view-project-link:hover .arrow {
+  transform: translateX(5px);
+  transition: transform 0.2s ease;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
