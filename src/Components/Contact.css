@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #030508;
+  filter: opacity(85%);
   color: #ffffff;
   font-family: sans-serif;
   box-sizing: border-box;
@@ -30,14 +30,13 @@
   display: flex;
   flex-direction: column;
   gap: 2.5vh;
+  width: 80vh;
 }
 
 .contact-detail-item {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2vh 3vh;
-  border-radius: 8px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
@@ -45,20 +44,22 @@
 
 .contact-detail-item:hover {
   border-color: #00ff88;
-  transform: translateX(10px);
+  transform: translateX(0.5vh);
   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1);
 }
 
 .detail-label {
   font-weight: bold;
   color: #ff9f00;
-  font-size: 2vh;
+  font-size: 1vh 2vh ;
 }
 
 .detail-value {
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2vh;
+  font-family: serif;
+  font-size: 2.5vh;
+  margin-left: 1vh;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 /* RUHANDE RW'IBURYO (FORM CARD) */
@@ -68,18 +69,24 @@
 }
 
 .contact-form-card {
-  background: #030508; 
+  background: #030508;
+  background-image: 
+  linear-gradient(rgb(30, 27, 27) 1px, transparent 50%),
+  linear-gradient(45deg, rgb(29, 29, 39) 1px, transparent 50%);
+  background-size: 20px 20px ,20px 20px;
   backdrop-filter: blur(10px);
-  border: 2px solid white;
+  border: 1px solid rgb(229, 78, 2);
   border-radius: 6px; 
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   padding: 4vh;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
 }
+
 
 .contact-form-card:hover {
   border-color: rgba(255, 159, 0, 0.5);
-  box-shadow: 0 15px 40px rgba(255, 159, 0, 0.2);
+  filter: drop-shadow(0 0 1px rgb(0, 0, 0));
 }
 
 .actual-form {
@@ -92,13 +99,17 @@
 .contact-input {
   width: 100%;
   height: 6vh;
-  background-color: rgba(3, 5, 8, 0.8); 
-  border: 2px solid #ff9f00;
-  border-radius: 8px; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  border: 1px solid #ea9400;
+  border-top: none;
+  border-right: none;
+  border-bottom-right-radius: none;
+  border-radius: 5px; 
   outline: none;
   padding-left: 20px;
   color: #ffffff;
-  font-size: 2vh;
+  font-size: 2.5vh;
+  text-shadow: 1px 1px rgb(0, 0, 0);
   box-sizing: border-box;
   transition: border-color 0.3s ease;
 }
@@ -107,6 +118,10 @@
   height: auto;
   padding-top: 1.5vh;
   resize: none;
+  font-style:normal;
+  font-family:sans-serif;
+  font-size: 3vh;
+  gap: 5vh;
 }
 
 .contact-input:focus {
@@ -116,50 +131,83 @@
 .contact-input::placeholder {
   color: rgba(255, 255, 255, 0.4); 
 }
-
-/* FOOTER (KAKA NYU) */
-.contact-footer {
-  background: rgba(3, 5, 8, 0.95);
-  border-top: 2px solid rgba(0, 255, 136, 0.3);
-  padding: 4vh 10vh 2vh 10vh;
-  margin-top: 5vh;
-}
-
-.footer-content {
+.form-group2{
   display: flex;
-  justify-content: center;
-  margin-bottom: 3vh;
+  gap: 1vh;
+}
+.submit-btn{
+  height: 10vh;
+  background-color: #a96500;
+  font-size: 5vh;
+  color: #000000;
+  border-radius: 1.3vh;
+}
+.submit-btn:hover{
+  filter: drop-shadow(0 0 3px white);
+  color: white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
-.footer-column h4 {
-  color: #ff9f00;
-  font-size: 2.2vh;
-  margin-bottom: 2vh;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-}
+        .whatsapp-container {
+            position: fixed;
+            margin-left: 68vh;
+            width: 100px;  
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+        }
 
-.footer-column a {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 1.8vh;
-  transition: color 0.2s ease;
-}
+        .whatsapp-container::before {
+            content: "";
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid #075e54; 
+            filter: drop-shadow(0 0 2vh rgba(7, 94, 84, 0.4));
+            animation: whatsapp 2s infinite ease-out;
+            pointer-events: none;
+            z-index: 1;
+        }
 
-.footer-column a:hover {
-  color: #00ff88;
-}
+        .whatsapp-btn {
+            position: relative;
+            width: 65px;
+            height: 65px;
+            background-color: #1ed760; 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease-in-out;
+            text-decoration: none;
+            z-index: 2;
+        }
 
-.social-links {
-  display: flex;
-  gap: 4vh;
-  justify-content: center;
-}
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2vh;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 1.6vh;
-}
+        .whatsapp-btn svg {
+            width: 32px;
+            height: 32px;
+            fill: #000000;
+        }
+
+        @keyframes whatsapp {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            85% {
+                transform: scale(1.35);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(1.45);
+                opacity: 0;
+            }
+        }

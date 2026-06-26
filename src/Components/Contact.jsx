@@ -23,12 +23,13 @@ export default function Contact() {
             Feel free to reach out if you want to collaborate on a project, 
             have questions, or just want to connect!
           </p>
-
+    
           <div className="contact-details-list">
             <div className="contact-detail-item">
               <span className="detail-label">Email:</span>
               <span className="detail-value">imanirumvapacifique39@gmail.com</span>
             </div>
+            
             <div className="contact-detail-item">
               <span className="detail-label">Phone:</span>
               <span className="detail-value">07886421456</span>
@@ -40,6 +41,10 @@ export default function Contact() {
             <div className="contact-detail-item">
               <span className="detail-label">GitHub:</span>
               <span className="detail-value">PACIFIQUE_VIBUCODER</span>
+            </div>
+             <div className="contact-detail-item">
+              <span className="detail-label">Location:</span>
+              <span className="detail-value">Kigali,Rwanda</span>
             </div>
           </div>
         </div>
@@ -60,35 +65,40 @@ export default function Contact() {
               <div className="form-group">
                 <input type="tel" name="user_phone" placeholder="Your Phone Number" required className="contact-input" />
               </div>
+              <div className="form-group2">
+                <input type="tel" name="user_phone" placeholder="Your country" required className="contact-input" />
+        <input type="tel" name="user_phone" placeholder="city" required className="contact-input" />
+              </div>
               <div className="form-group">
                 <textarea name="message" placeholder="Your Message..." required rows="5" className="contact-input contact-textarea"></textarea>
               </div>
-              <button type="submit" className="mycv-btn" style={{ width: '100%', marginTop: '2vh', fontSize: '2.5vh', height: '6vh' }}>
+              <button type="submit" className="submit-btn" style={{ width: '100%', marginTop: '2vh', fontSize: '2.5vh', height: '6vh' }}>
                 Send Message
               </button>
             </form>
           </div>
+          <div class="whatsapp-container">
+        <a href="https://wa.me/250788000000?text=Muraho!" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 
+                5.348 5.4.01 12.008.01c3.202.001 6.212 1.246 8.477 3.516 2.266
+                 2.27 3.51 5.284 3.508 8.492-.005 6.653-5.347 11.991-11.956 
+                 11.991-1.992-.001-3.951-.499-5.688-1.449L0 
+                 24zm6.59-4.846c1.655.982 3.511 1.5 5.409 1.51 5.4 0 9.79-4.386 
+                 9.794-9.779.002-2.612-1.01-5.067-2.852-6.911C17.1 2.13 14.653.992
+                  12.01.992c-5.398 0-9.786 4.387-9.79 9.78-.002 1.801.474 3.56 1.378 5.12l-.995 3.634 
+3.72-.975zm11.096-7.466c-.29-.145-1.716-.847-1.983-.944-.266-.097-.46-.145-.654.145-.193.291-.748.944-.918 
+1.138-.17.193-.34.217-.63.072-.29-.145-1.226-.452-2.334-1.44-1.108-.989-1.857-2.21-2.074-2.501-.218-.291-.023-.448.122-.592.13-.13.29-.34.435-.509.145-.17.193-.29.29-.484.097-.194.048-.363-.024-.509-.072-.145-.654-1.573-.895-2.154-.235-.565-.473-.489-.654-.498-.169-.008-.363-.01-.557-.01-.194 0-.508.073-.774.363-.266.291-1.016.993-1.016
+ 2.422 0 1.43 1.04 2.81 1.185 3.004.145.194 2.048 3.127 
+4.96 4.383.693.299 1.234.478 1.656.612.696.222 1.329.19 1.83.115.558-.08 1.716-.701 
+1.958-1.379.242-.678.242-1.259.17-1.379-.072-.12-.266-.194-.556-.34z"/>
+            </svg>
+        </a>
+    </div>
         </div>
-
       </div>
 
-      {/* --- KAKA NYU (FOOTER) - SOCIAL MEDIA GUSA --- */}
-      <footer className="contact-footer">
-        <div className="footer-content">
-          <div className="footer-column" style={{ textAlign: 'center' }}>
-            <h4>SOCIAL MEDIA</h4>
-            <div className="social-links">
-              <a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer">Twitter</a>
-              <a href="https://wa.me/07834287653" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Pacifique. All Rights Reserved.</p>
-        </div>
-      </footer>
+  
     </div>
   );
 }
