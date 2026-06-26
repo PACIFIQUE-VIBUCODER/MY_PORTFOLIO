@@ -64,21 +64,19 @@ body {
 }
 
 #skills {
-  background: #1a1919;
+  background: #05090f;
 }
 
-#experience {
-  background: #1a1919;
-}
 
 #projects {
-  background:#1a1919;
+  background:#05090f;
 }
 #testimonials {
-  background: #1a1919;
+  background: #05090f;
 }
 
 #contact {
-  background: #1e1e2f;
+  background: #05090f;
   color: white;
+  height: 90vh;
 }

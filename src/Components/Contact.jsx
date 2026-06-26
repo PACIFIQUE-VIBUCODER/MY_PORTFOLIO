@@ -137,7 +137,9 @@ export default function Contact() {
   <div></div>
 </div>
   </footer>
- 
+  <legend className='copyright'> <br />
+    &copy; 2026 IMANIRUMVA Pacifique, All Rights Reserved
+     </legend>
     </div>
   );
 }
