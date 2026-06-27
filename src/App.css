@@ -67,17 +67,25 @@ body {
 
 #skills {
 
+  background: #05090f;
+=======
+
   background: #1a1919;
+
 }
 
-#experience {
-  background: #1a1919;
-}
 
 #projects {
-  background:#1a1919;
+  background:#05090f;
 }
 #testimonials {
+
+  background: #05090f;
+}
+
+#contact {
+  background: #05090f;
+=======
   background: #1a1919;
 =======
   background: #030109;
@@ -92,5 +100,7 @@ body {
 
 #contact {
   background: #030109;
+
   color: white;
+  height: 90vh;
 }

@@ -293,3 +293,15 @@
 .location-value{
   color: #a4a2a2;
 }
+.copyright{
+  margin-left: -5vh;
+  height: 8vh;
+  text-align: center;
+  justify-content: center;
+  font-family: serif;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 2.3vh;
+  background-color: #000000;
+  text-shadow: 1px 1px 1px rgb(54, 54, 54);
+}
