@@ -98,7 +98,46 @@ export default function Contact() {
         </div>
       </div>
 
+  <footer className='footer-section'>
+<div className='handle'>
+  <h2 className='heading'>quick access</h2><br />
+  <p className='heading1'> home</p>
+  <p className='heading1'> about</p>
+  <p className='heading1'>skill</p>
+  <p className='heading1'>project</p>
+   <p className='heading1'>testimonial</p>
+    <p className='heading1'>contact</p>
+</div>
+
+<div className='handle'>
+  <h2 className='heading'>meet  with  social meadia</h2> <br />
+  <p className='social-media'>use social media link to meet with me</p>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+  <div className='handle-media'></div>
+</div>
+<div className='handle'>
+  <h2 className='heading'>contact</h2><br />
+  <div className='handle2'>
+  <div className='handle-contact1'></div> <span className="type">phone <br /><span className='new-value'> 0782654256 </span></span>
+  <div className='handle-contact1'></div> <span className='type'>whatapp <br /><span className='new-value1'>0782564432 </span> </span>
+</div>
+</div>
+<div className='handle'>
+  <h2 className='heading'>location</h2><br />
+  <div className='location'> District : <span className='location-value'>Kicukiro</span> </div><br />
+    <div className='location'> City : <span className='location-value'>Kigali</span> </div><br />
+      <div className='location'>Country   : <span className='location-value'>Rwanda</span> </div><br />
+      <p className='over-all'>Kicukiro,Kigali,Rwanda</p>
+
+
   
+  <div></div>
+</div>
+  </footer>
+ 
     </div>
   );
 }
