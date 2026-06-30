@@ -6,9 +6,10 @@ export default function Skills() {
   const languages = [
     { name: "HTML5", level: 95 },
     { name: "CSS3", level: 92 },
-    { name: "JavaScript", level: 80 },
-    { name: "Python", level: 75 },
-    { name: "PHP", level: 70 },
+    { name: "JavaScript", level: 90 },
+    { name: "React", level: 85 },
+    { name: "Vue JS", level: 82 },
+    {name: " PHP", level:75 }
   ];
 
   // Your Frameworks, Design Tools, and Version Control systems grouped logically
